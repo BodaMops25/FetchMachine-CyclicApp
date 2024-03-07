@@ -85,5 +85,5 @@ function getPostData(req) {
 }
 
 const variables = {
-  website_domain: process.env.WEBSITE_DOMAIN || "website_domain.com"
+  website_domain: process.env.WEBSITE_DOMAIN || "https://website_domain.com"
 }

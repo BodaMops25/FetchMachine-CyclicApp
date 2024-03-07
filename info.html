@@ -24,7 +24,7 @@
 
   <p>Request looks like this(for fetch):</p>
   <pre>
-    fetch('http://{{website_domain}}/fetch_machine/getFetch', {
+    fetch('{{website_domain}}/fetch_machine/getFetch', {
       method: 'POST',
       body: JSON.stringify({
         url: 'https://example.com',
@@ -38,6 +38,6 @@
   </pre>
 
   <p>After the request, you receive a promise with your data.</p>
-  <p>I have async FM_makeFetch function to facilitate code writing http://{{website_domain}}/fetchMachineClient.js.</p>
+  <p>I have async FM_makeFetch function to facilitate code writing {{website_domain}}/fetchMachineClient.js.</p>
 </body>
 </html>
