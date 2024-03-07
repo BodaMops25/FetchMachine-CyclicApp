@@ -16,6 +16,8 @@ const server = http.createServer(async (req, res) => {
     fs.readFile(__dirname + req.url)
     .then(content => {
 
+      content.replace(/{{(.*?)}}/g, (match, key) => variables[key] ? variables[key] : match)
+
       let contentType = ''
 
       switch(req.url.match(/\..+$/)[0]) {
@@ -79,4 +81,9 @@ function getPostData(req) {
     }
   })
   return new Promise(res => req.on('end', () => res(body)))
+}
+
+
+const variables = {
+  website_domen: "bm25-website.cyclic.app"
 }

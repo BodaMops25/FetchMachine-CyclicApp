@@ -23,8 +23,8 @@
   </ul>
 
   <p>Request looks like this(for fetch):</p>
-  <pre id="code-example">
-    fetch('http://current-website.com/fetch_machine/getFetch', {
+  <pre>
+    fetch('http://{{website_domen}}/fetch_machine/getFetch', {
       method: 'POST',
       body: JSON.stringify({
         url: 'https://example.com',
@@ -38,27 +38,6 @@
   </pre>
 
   <p>After the request, you receive a promise with your data.</p>
-  <p id="library-url">I have async FM_makeFetch function to facilitate code writing http://current-website.com/fetchMachineClient.js.</p>
-
-  <script>
-
-    document.querySelector('#code-example').innerHTML = `
-      fetch('${location}fetch_machine/getFetch', {
-        method: 'POST',
-        body: JSON.stringify({
-          url: 'https://example.com',
-          method: 'GET',
-          headers: {'Content-Type': 'application/json'},
-          body: {
-            title: 'some title'
-          }
-        })
-      })
-    `
-
-    document.querySelector('#library-url').innerHTML = `I have async FM_makeFetch function to facilitate code writing <a href="${location}fetchMachineClient.js">${location}fetchMachineClient.js</a>`
-
-  </script>
-
+  <p>I have async FM_makeFetch function to facilitate code writing http://{{website_domen}}/fetchMachineClient.js.</p>
 </body>
 </html>
